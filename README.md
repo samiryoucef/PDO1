@@ -22,8 +22,44 @@ Ce TP a pour objectif de vous guider pas à pas dans l’utilisation de PDO pour
 > **PDO n’est pas un framework** : il s’agit d’une **extension native de PHP**, intégrée au langage, destinée exclusivement à la gestion des accès aux bases de données.
 
 <p align="center">
-  <img src="images/Pasted image 20251219190639.png" alt="description">
+  <img src="images/Pasted image 20251219190639.png" alt="description" >
 </p>
+
+```php
+<?php
+$mysqlClient = new PDO(
+    'mysql:host=localhost;dbname=partage_de_recettes;charset=utf8',
+    'root',
+    ''
+);
+?>
+```
+
+```php
+<?php
+try {
+    // On se connecte à MySQL
+    $mysqlClient = new PDO('mysql:host=localhost;dbname=partage_de_recettes;charset=utf8', 'root', 'root');
+} catch (Exception $e) {
+    // En cas d'erreur, on affiche un message et on arrête tout
+    die('Erreur : ' . $e->getMessage());
+}
+// Si tout va bien, on peut continuer
+
+// On récupère tout le contenu de la table recipes
+$sqlQuery = 'SELECT * FROM recipes';
+$recipesStatement = $mysqlClient->prepare($sqlQuery);
+$recipesStatement->execute();
+$recipes = $recipesStatement->fetchAll();
+
+// On affiche chaque recette une à une
+foreach ($recipes as $recipe) {
+?>
+    <p><?php echo $recipe['author']; ?></p>
+<?php
+}
+?>
+```
 
 
 ##### Partie I 
