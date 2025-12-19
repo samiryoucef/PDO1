@@ -64,7 +64,80 @@ foreach ($recipes as $recipe) {
 
 ##### Partie I 
 
+```sql
+CREATE DATABASE bibliotheque CHARACTER SET utf8mb4;
+USE bibliotheque;
 
+CREATE TABLE livres (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(255) NOT NULL,
+  auteur VARCHAR(255) NOT NULL,
+  annee INT NOT NULL
+);
+```
+
+```sql
+INSERT INTO livres (titre, auteur, annee) VALUES
+('L’Étranger', 'Albert Camus', 1942),
+('1984', 'George Orwell', 1949),
+('Le Petit Prince', 'Antoine de Saint-Exupéry', 1943),
+('La Peste', 'Albert Camus', 1947);
+```
+
+
+Connexion à la base. 
+
+```sql
+<?php
+$host = "localhost";
+$dbname = "bibliotheque";
+$user = "root";
+$pass = "";
+
+try {
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $user,
+        $pass
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+```
+
+```php
+<?php
+require "db.php";
+
+$sql = "SELECT * FROM livres";
+$stmt = $pdo->query($sql);
+$livres = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des livres</title>
+</head>
+<body>
+
+<h2>Liste des livres</h2>
+
+<ul>
+<?php foreach ($livres as $livre): ?>
+    <li>
+        <?= htmlspecialchars($livre['titre']) ?>
+        (<?= $livre['annee'] ?>) –
+        <?= htmlspecialchars($livre['auteur']) ?>
+    </li>
+<?php endforeach; ?>
+</ul>
+
+</body>
+</html>
+```
 
 ##### Partie II
 

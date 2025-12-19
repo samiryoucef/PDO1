@@ -1,0 +1,10 @@
+CREATE DATABASE bibliotheque CHARACTER SET utf8mb4;
+USE bibliotheque;
+
+CREATE TABLE livres (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(255) NOT NULL,
+  auteur VARCHAR(255) NOT NULL,
+  annee INT NOT NULL
+);
+
