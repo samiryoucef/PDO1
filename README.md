@@ -64,6 +64,8 @@ foreach ($recipes as $recipe) {
 
 ##### Partie I 
 
+Les scripts de création du schéma _livres_ et d’initialisation des données sont fournis ci-après et sont également accessibles dans le sous-dossier **scriptsSql**.
+
 ```sql
 CREATE DATABASE bibliotheque CHARACTER SET utf8mb4;
 USE bibliotheque;
@@ -83,6 +85,9 @@ INSERT INTO livres (titre, auteur, annee) VALUES
 ('Le Petit Prince', 'Antoine de Saint-Exupéry', 1943),
 ('La Peste', 'Albert Camus', 1947);
 ```
+
+
+##### Partie II
 
 
 Connexion à la base. 
@@ -138,9 +143,6 @@ $livres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </body>
 </html>
 ```
-
-##### Partie II
-
 
 
 
