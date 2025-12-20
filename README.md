@@ -149,9 +149,15 @@ $livres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 Le résultat de l'exécution de ce script est donné par la figure suivante. 
 
+
 <p align="center">
-  <img src="images/Pasted image 20251220065943.png" alt="description" >
+  <img src="images/Pasted image 20251220065943.png"
+       alt="description"
+       width="400"
+       height="200">
 </p>
+
+
 
 
 
