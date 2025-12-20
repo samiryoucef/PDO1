@@ -101,9 +101,13 @@ Une fois les paramètres sont définis, la prochaine étape est d'établir la co
     - le jeu de caractères (`utf8mb4`)
 - `$user` et `$pass` sont utilisés pour **s’authentifier**.
 
-Si la connexion réussit, l’objet `$pdo` permet ensuite d’**exécuter des requêtes SQL**.
+Si la connexion est réussie, l’objet `$pdo` permet ensuite d’**exécuter des requêtes SQL**.
 
-Quand la gestion des erreurs, cette instruction  `$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);` indique à _PDO_ de  lever des exceptions en cas d'erreur.  Elles sont capturées dans un bloc `try/catch`. Ce dernier contient les instructions susceptibles de générer des erreurs.  `die()` stope immédiatement l'exécution du script en cas d'erreur.  
+Quant la gestion des erreurs, cette instruction  `$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);` indique à _PDO_ de  lever des exceptions en cas d'erreur.  Elles sont capturées dans un bloc `try/catch`. Ce dernier contient les instructions susceptibles de générer des erreurs.  `die()` stope immédiatement l'exécution du script en cas d'erreur.  
+
+Illustrons la manière d’envoyer une requête simple, par exemple : `SELECT * FROM livres`, et afficher le résultat dans une page HTML.
+
+
 
 
 ```php
@@ -139,7 +143,11 @@ $livres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </html>
 ```
 
+Le résultat de l'exécution de ce script est donné par la figure suivante. 
 
 <p align="center">
   <img src="Pasted image 20251220065943.png" alt="description" >
 </p>
+
+
+
