@@ -26,9 +26,13 @@ Ce TP a pour objectif de vous guider pas à pas dans l’utilisation de PDO (_PH
 > **PDO n’est pas un framework** : il s’agit d’une **extension native de PHP**, intégrée au langage, destinée exclusivement à la gestion des accès aux bases de données.
 
 <p align="center">
-  <img src="images/Pasted image 20251219190639.png" alt="description" >
+  <img src="images/Pasted image 20251219190639.png"
+       alt="description"
+       width="800"
+       height="100">
 </p>
 
+---
 
 ##### Partie I 
 
