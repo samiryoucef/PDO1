@@ -92,6 +92,21 @@ En pratique, ces valeurs peuvent changer selon l’environnement (MAMP, serveur 
 - Utiliser toujours `utf8mb4` 
 Ce n'est toujours pas clair ? Revoir le cours 😊
 
+Une fois les paramètres sont définis, la prochaine étape est d'établir la connexion proprement dite, en créant un objet de la classe _PDO_. Le constructeur prend trois paramètres en entrée : 
+
+- `"mysql:..."` est le **DSN (Data Source Name)**  
+    Il indique :
+    - le type de base de données (`mysql`)
+    - le serveur (`host`)
+    - la base utilisée (`dbname`)
+    - le jeu de caractères (`utf8mb4`)
+- `$user` et `$pass` sont utilisés pour **s’authentifier**.
+
+Si la connexion réussit, l’objet `$pdo` permet ensuite d’**exécuter des requêtes SQL**.
+
+Quand la gestion des erreurs, cette instruction  `$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);` indique à _PDO_ de  lever des exceptions en cas d'erreur.  Elles sont capturées dans un bloc `try/catch`. Ce dernier contient les instructions susceptibles de générer des erreurs.  `die()` stope immédiatement l'exécution du script en cas d'erreur.  
+
+
 ```php
 <?php
 require "db.php";
