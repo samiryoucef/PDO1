@@ -10,7 +10,6 @@
  Accès aux données en PHP via PDO  (PHP Data Objects) 
 </h2>
 <br> 
-#####
 
 Ce TP a pour objectif de vous guider pas à pas dans l’utilisation de PDO (_PHP Data Objects_) pour accéder à une base de données en PHP. Il se compose de deux parties : une première partie dédiée à la mise en place de l’environnement et à l’importation des données, et une seconde partie consacrée aux requêtes et à l’exploitation des données. Si vous avez déjà une base de données prête à l’emploi, vous pouvez commencer directement par la deuxième partie.  Quel que soit le SGBD relationnel que vous utilisez, la manière d’interroger les données reste la même et ne change pas dans les grandes lignes (C’est d’ailleurs l’un des grands atouts des SGBD : **la séparation entre la couche physique et la couche logique**, qui permet de manipuler les données sans se soucier de leur stockage réel). Dans la suite de ce TP, j’utiliserai **MAMP** pour les exemples, mais les principes présentés s’appliquent de la même façon avec d’autres environnements.   La figure suuivante illustre le cycle de vie complet d’une requête HTTP dans une application web dynamique. Le client (navigateur) envoie une requête HTTP vers le serveur web, qui la transmet au moteur PHP pour exécution. Le script PHP s’appuie sur **PDO** comme couche d’abstraction d’accès aux données afin d’établir une connexion avec le **SGBD relationnel**, d’exécuter des requêtes SQL et de récupérer les ensembles de résultats. Ces données sont ensuite traitées côté serveur avant d’être encapsulées dans une réponse HTTP renvoyée au client. 
 
@@ -87,10 +86,10 @@ Les **informations nécessaires pour se connecter à la base de données** sont 
 - `$pass` : mot de passe associé à cet utilisateur.
 En pratique, ces valeurs peuvent changer selon l’environnement (MAMP, serveur distant, etc.).
 
-##### Bonnes pratiques
-- Ne jamais afficher les erreurs détaillées en production
-- Utiliser toujours `utf8mb4` 
-Ce n'est toujours pas clair ? Revoir le cours 😊
+>  **Bonnes pratiques**
+>- Ne jamais afficher les erreurs détaillées en production
+>- Utiliser toujours `utf8mb4` 
+>Ce n'est toujours pas clair ? Revoir le cours 😊
 
 Une fois les paramètres sont définis, la prochaine étape est d'établir la connexion proprement dite, en créant un objet de la classe _PDO_. Le constructeur prend trois paramètres en entrée : 
 
