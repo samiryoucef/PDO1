@@ -14,7 +14,7 @@
 Ce TP a pour objectif de vous guider pas à pas dans l’utilisation de PDO (_PHP Data Objects_) pour accéder à une base de données en PHP. Il se compose de deux parties : une première partie dédiée à la mise en place de l’environnement et à l’importation des données, et une seconde partie consacrée aux requêtes et à l’exploitation des données. Si vous avez déjà une base de données prête à l’emploi, vous pouvez commencer directement par la deuxième partie.  Quel que soit le SGBD relationnel que vous utilisez, la manière d’interroger les données reste la même et ne change pas dans les grandes lignes (C’est d’ailleurs l’un des grands atouts des SGBD : **la séparation entre la couche physique et la couche logique**, qui permet de manipuler les données sans se soucier de leur stockage réel). Dans la suite de ce TP, j’utiliserai **MAMP** pour les exemples, mais les principes présentés s’appliquent de la même façon avec d’autres environnements.   La figure suuivante illustre le cycle de vie complet d’une requête HTTP dans une application web dynamique. Le client (navigateur) envoie une requête HTTP vers le serveur web, qui la transmet au moteur PHP pour exécution. Le script PHP s’appuie sur **PDO** comme couche d’abstraction d’accès aux données afin d’établir une connexion avec le **SGBD relationnel**, d’exécuter des requêtes SQL et de récupérer les ensembles de résultats. Ces données sont ensuite traitées côté serveur avant d’être encapsulées dans une réponse HTTP renvoyée au client. 
 
 <p align="center">
-  <img src="Pasted image 20251220094451.png" alt="description" >
+  <img src="images/Pasted image 20251220094451.png" alt="description" >
 </p>
 
 
@@ -146,7 +146,7 @@ $livres = $stmt->fetchAll(PDO::FETCH_ASSOC);
 Le résultat de l'exécution de ce script est donné par la figure suivante. 
 
 <p align="center">
-  <img src="Pasted image 20251220065943.png" alt="description" >
+  <img src="images/Pasted image 20251220065943.png" alt="description" >
 </p>
 
 
