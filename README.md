@@ -209,9 +209,11 @@ L’objectif de cette SAE est de concevoir et développer une **application web 
 - **Bootstrap** (ou tout autre framework CSS) pour améliorer l’ergonomie et le design de l’interface ;
 - **Git** pour le versionnage du code et le suivi de l’évolution du projet.
 
+
+
 <p align="center">
-  <img src="images/Pasted image 20251217001719.png" alt="description">
-  <br/>
+  <img src="images/Pasted image 20251220094451.png" alt="description" >
+</p>
   <small>Architecture de l'application à concevoir</small><br>
 </p>
 
