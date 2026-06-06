@@ -174,3 +174,155 @@ foreach ($livres as $livre):
 </body>
 </html>
 ```
+
+-----------------------------------------------
+-----------------------------------------------
+<p align="left">
+
+<img src="images/Institut-Galilee.png" alt="Logo Université" height="65" align="left">
+  <img src="images/Sup-Galilee.png" alt="Logo Université" height="50" align="right">
+</p>
+
+<br> <br><br> 
+
+<h2 align="center">
+  Développement d’une application web dynamique avec gestion de base de données
+</h2>
+
+
+###### Personnes à contacter
+
+- Nathalie Pernelle <nathalie.pernelle@univ-paris13.fr>
+- Manel Zarrouk <zarrouk@lipn.univ-paris13.fr>
+- Samir Youcef <youcef@lipn.univ-paris13.fr>
+
+Le travail demandé ci-dessous est à réaliser en binôme (trois personnes maximum).  
+Le projet devra être déposé dans un dépôt Git et structuré selon l’organisation indiquée ci-après.  
+Merci de renseigner le lien vers votre dépôt via le lien suivant (onglet SAEINFO1) : https://docs.google.com/spreadsheets/d/1Lxuwx4RUQtrJtsa6HpUhb9-XEUoNAOIMEujXRWvqbd0/edit?usp=sharing
+
+#### Objectif
+
+L’objectif de cette SAE est de concevoir et développer une **application web interactive** qui exploite une base de données relationnelle.  L'architecture de l'application est illustré dans la figure suivante.  Son développement s'appuie sur les technologies suivante. 
+
+- **JavaScript** pour dynamiser l’interface utilisateur (formulaires, validation, interactions) ;
+- **PHP** pour assurer la logique métier côté serveur et l’accès à la base de données avec PDO (_Php Data Objects_)
+- **Bootstrap** (ou tout autre framework CSS) pour améliorer l’ergonomie et le design de l’interface ;
+- **Git** pour le versionnage du code et le suivi de l’évolution du projet.
+
+<p align="center">
+  <img src="images/Pasted image 20251217001719.png" alt="description">
+  <br/>
+  <small>Architecture de l'application à concevoir</small><br>
+</p>
+
+
+#### Compétences travaillées
+
+À l’issue de cette SAE, vous serez capable de :
+- Concevoir un **schéma relationnel complet** (1–1, 1–N, N–N). 
+- Interroger une base de données avec **PHP (PHP Data Objects**). Je vous conseille de commencer par réaliser le tutoriel  disponible à l'adresse suivante https://github.com/samiryoucef/PDO1
+- Documenter un projet avec un **README**
+- Comprendre les **limites du relationnel en termes de passage à l'échelle (scalabilité)**
+
+#### Contexte du projet à réaliser 
+
+Vous devez développer une application web permettant de gérer des données issues d’un **cas d’application au choix**. 
+
+##### Quelques exemples de cas possibles (liste non exhaustive)  :
+
+- Gestion de films / séries
+- Association sportive
+- Bibliothèque musicale
+- Médiathèque
+- Jeux vidéo
+- Restaurant / menus
+- Gestion d’étudiants / formations
+
+##### Important 
+Les données utilisées doivent être réelles et provenir de sources ouvertes et fiables.  
+Par exemple, vous pouvez utiliser des jeux de données comme ceux de MovieLens ([https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/)) ou du portail data.gouv.fr ([https://www.data.gouv.fr/datasets/](https://www.data.gouv.fr/datasets/)).
+
+##### Contraintes techniques
+
+1. Langage : **PHP 8.x**
+2. Accès base de données : **PDO**
+3. Base de données : **MySQL / MariaDB**
+4. Serveur local : XAMPP / WAMP / MAMP
+5. Gestion de version : **Git (obligatoire)**
+
+##### Travail demandé
+
+######  Dépôt Git (obligatoire)
+1. Créer un **dépôt Git** (GitHub / GitLab) 
+2. Effectuer des **commits réguliers**
+3. Chaque commit doit avoir un **message explicite**
+
+**_Attention : un projet avec peu de commit sera pénalisé._**
+
+##### Modélisation de la base de données
+
+Vous devez fournir :
+
+1. un **schéma relationnel**
+2. un script SQL `schema.sql`
+3. Le jeu de données utilisé
+
+Le schéma doit contenir **au minimum** :
+
+1. Une relation 1–1
+2. Une relation 1–N
+3. Une relation N–N
+
+##### Conclusion
+
+Cette SAE vise à vous placer dans une **situation proche du monde professionnel**, en combinant :
+1. développement,
+2. bases de données,
+3. gestion de projet,
+4. réflexion sur la scalabilité.
+
+##### Bonus – Limites et ouverture NoSQL, Not Only SQL 
+
+###### Objectif du bonus
+
+Montrer que l’application **ne passe pas à l’échelle** dans certains cas.
+
+###### Travail demandé
+
+1. Décrire un **scénario de forte montée en charge** :
+- grand volume de données (vous pouvez simuler des données)
+- nombreuses relations
+- requêtes coûteuses
+2. - Expliquer :
+    - pourquoi le modèle relationnel devient limitant
+    - quelles requêtes posent problème
+- Proposer **une alternative NoSQL** (MongoDB, par exemple) :
+    - sans implémentation
+    - uniquement conceptuelle
+
+##### Livrables attendus
+- Lien vers le **dépôt Git**
+- Application fonctionnelle
+- Script SQL
+- README.md complet
+- Présentation de 10 minutes de votre travail
+
+----
+##### Grille d'évaluation à titre indicative 
+
+| Critère                  | Pondération |
+| ------------------------ | ----------- |
+| Modélisation de la base  | 25 %        |
+| Utilisation de PHP / PDO | 25 %        |
+| Relations SQL            | 20 %        |
+| Git & commits            | 15 %        |
+| README & documentation   | 10 %        |
+| Bonus NoSQL              | +5 %        |
+
+##### Grille d'évaluation par les pairs
+
+
+##### Echéances :
+- Constitution des groupes
+- Mettre un lien pour renseigner les dépôts Git
+- Validation du sujet  et du cas d'utilisation 
